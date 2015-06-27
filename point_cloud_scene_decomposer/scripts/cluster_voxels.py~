@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+from point_cloud_scene_decomposer.srv import *
+import rospy
+import numpy as np
+
+def cluster_voxel_srv_handler(req):
+    print 'HANDLER'
+    #return ClusterVoxelsResponse
+
+def cluster_voxel_server():
+    rospy.init_node('cluster_voxel_server')
+    s = rospy.Service('cluster_voxel', ClusterVoxels, cluster_voxel_srv_handler)
+    rospy.spin()
+    
+if __name__ == "__main__":
+    cluster_voxel_server()

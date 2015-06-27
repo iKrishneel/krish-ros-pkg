@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="jsk_pcl_ros" type="cluster_point_indices_decomposer"
+	name="convex_connected_voxels_decomposer">
+    <remap from="~input" to="/scene_decomposer/output/cloud" />
+    <remap from="~target" to="/scene_decomposer/output/indices" />
+  </node>
+</launch>
